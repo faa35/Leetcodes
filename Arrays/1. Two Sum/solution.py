@@ -5,11 +5,16 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        seen = {}
-
         for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in seen:
-                return [seen[diff],i]
-            else:
-                seen[nums[i]] = i
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
+
+# Testing the Solution
+nums = [2, 7, 11, 15]
+target = 9
+
+solution = Solution()
+result = solution.twoSum(nums, target)
+print("Input: nums =", nums, ", target =", target)
+print("Output:", result)
