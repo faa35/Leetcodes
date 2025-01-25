@@ -1,3 +1,28 @@
+```python
+
+class Solution(object):
+    def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] == nums[j]:
+                    return True
+
+
+        return False
+
+sol = Solution()
+
+# Example 1
+print(sol.containsDuplicate([1, 2, 3, 1]))  # Output: True
+
+```
+
+
+
 
 
 ```python
@@ -7,13 +32,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        seen = []  # List to track seen elements
+        seen = []  
 
         for i in range(len(nums)):
-            if nums[i] in seen:  # Check if the value is already in the seen list
+            if nums[i] in seen:  
                 return True
-            seen.append(nums[i])  # Add the value to the seen list
-        return False  # Return False if no duplicates are found
+            seen.append(nums[i])  
+        return False  
 ```
 
 ### Improvements:
@@ -27,13 +52,13 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        seen = set()  # Use a set for better performance
+        seen = set()  
 
         for num in nums:
-            if num in seen:  # Check if the number is already in the set
+            if num in seen: 
                 return True
-            seen.add(num)  # Add the number to the set
-        return False  # Return False if no duplicates are found
+            seen.add(num) 
+        return False  
 ```
 
 ### Explanation:
