@@ -1,7 +1,6 @@
 # LeetCode Problems Solved
 
-This repository contains solutions to LeetCode problems I've solved so far. Each problem includes a brief description and a link to the problem statement on LeetCode.
-
+This repository contains solutions to LeetCode problems I've solved so far. 
 ---
 
 ## Problems Solved
